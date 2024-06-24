@@ -62,20 +62,209 @@ table {
 }
 
 
-
-
-nav h2::first-line {
-    visibility: hidden;
+* {
+  box-sizing: border-box;
 }
 
-.bebas-neue-regular {
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-.montserrat-uniquifier {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: <weight>;
-    font-style: normal;
-  }
+/* ---------- MAIN STYLES ----------*/
+body {
+  margin-top: 100px;
+  background-color: var(--gray);
+  line-height: 1.2;
+}
+
+header, main, nav, footer {
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+
+/* ---------- GIVEN STYLES ----------*/
+h1, h2, h3, nav a, nav span, menu li, #social li, footer {
+  font-family: var(--head-font);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+}
+
+p, dd, li, nav, input {
+  font-family: var(--body-font);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+}
+
+dt {
+  font-family: var(--body-font);
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+}
+
+/* ---------- NAV STYLES ----------*/
+ul {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+  background-color: var(--gray);
+  width: 100%;
+  margin-top: 80px;
+}
+
+nav > label {
+  height: 80px;
+  width: 100px;
+  position: fixed;
+  z-index: 4;
+  background-color: white;
+  padding: 18.5px 30px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+nav > h2 {
+  position: absolute;
+  visibility: hidden;
+}
+
+/* ---------- FORM STYLES ----------*/
+nav form {
+  width: 100%;
+  margin-top: 20px;
+}
+
+nav form h3 {
+  visibility: hidden;
+}
+
+nav form div {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--orange);
+}
+
+nav form input {
+  flex: 1 0;
+  border: none;
+  height: 50px;
+  outline: none;
+}
+
+nav form button {
+  height: 50px;
+  width: 60px;
+  border: none;
+  background-color: var(--orange);
+}
+
+nav form button svg {
+  stroke: white;
+}
+
+/* ---------- HAMBURGER STYLES ----------*/
+nav > label svg{
+  stroke: var(--orange);
+  transition: 1s;
+}
+
+nav > input {
+  display: none;
+}
+
+/* ---------- HOME STYLES ----------*/
+nav ul li:first-child::first-line {
+  visibility: hidden;
+}
+
+nav ul li:first-child {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  cursor: pointer;
+  background-color: var(--orange);
+  box-shadow: 0px 6px 6px -1px rgba(0,0,0,0.48);
+  transition: box-shadow 1s;
+}
+nav ul li:first-child a{
+  padding: 10px;
+}
+
+nav ul li:first-child svg {
+  width: 100%;
+  position: relative;
+  top: -10px;
+}
+
+/* ---------- PROFILE STYLES ----------*/
+nav ul li:last-child {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: auto;
+  z-index: 4;
+}
+
+nav ul li:last-child a{
+  display: block;
+  padding: 17px 30px;
+  background-color: white;
+  position: relative;
+  cursor: pointer;
+}
+
+nav ul li:last-child svg {
+  stroke: var(--orange);
+}
+
+/* ---------- DROPDOWN STYLES ----------*/
+nav > input:checked ~ label svg {
+  transform: rotate(360deg) scale(1.2);
+}
+
+nav > input:checked ~ ul {
+  max-height:100vh;
+  overflow-y: scroll;
+}
+
+nav > input:checked ~ ul li:first-child {
+  box-shadow: none;
+}
+
+
+
+
+
+/* ---------- HEADER STYLES ----------*/
+header {
+  margin-top: 200px;
+}
