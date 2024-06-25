@@ -134,6 +134,20 @@ nav ul {
   margin-top: 80px;
 }
 
+nav li:nth-child(n+2) a {
+  padding: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--orange);
+}
+
+nav li a img {
+  width: 200px;
+}
+
 nav > label {
   height: 80px;
   width: 100px;
@@ -288,6 +302,7 @@ header a {
   align-items: center;
   text-decoration: none;
   color: var(--orange);
+  padding: 20px;
 }
 
 header p {
@@ -435,7 +450,6 @@ footer section:last-child {
 
 footer section:last-child p {
   order: 4;
-
 }
 
 footer section:last-child img {
@@ -448,3 +462,28 @@ footer section:last-child img {
 footer small {
   order: 3;
 }
+
+/* ---------- FOCUS STYLES ----------*/
+a:focus , button:focus, input:focus {
+  outline: 2px solid var(--blue-green);
+}
+
+/* ---------- HOVER STYLES ----------*/
+nav li:nth-child(n + 2) a:hover, button:hover, input:hover {
+  background-color: var(--blue-green);
+}
+
+input:hover {
+  color: white;
+}
+
+a:hover svg{
+  stroke: var(--blue-green);
+  background-color: none;
+}
+
+a:hover {
+  color: var(--blue-green);
+}
+
+/* ---------- ACTIVE STYLES ----------*/
