@@ -88,19 +88,6 @@ nav {
   overflow: hidden;
 }
 
-h1 {
-  font-size: 40px;
-}
-
-h2 {
-  font-size: 30px;
-}
-
-h3 {
-  font-size: 25px;
-}
-
-
 /* ---------- GIVEN STYLES ----------*/
 h1, h2, h3, nav a, nav span, menu li, #social li, footer {
   font-family: var(--head-font);
@@ -125,8 +112,20 @@ dt {
   font-size: 16px;
 }
 
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
 /* ---------- NAV STYLES ----------*/
-ul {
+nav ul {
   overflow: hidden;
   max-height: 0;
   transition: max-height .2s ease-out;
@@ -267,5 +266,62 @@ nav > input:checked ~ ul li:first-child {
 
 /* ---------- HEADER STYLES ----------*/
 header {
-  margin-top: 200px;
+  margin-top: 210px;
+}
+
+h1 {
+  text-align: center;
+}
+
+header menu {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  margin: 20px 0;
+  line-height: 1;
+}
+
+header a {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--orange);
+}
+
+header p {
+  padding: 10px;
+}
+
+/* ---------- MAIN STYLES ----------*/
+/* ---------- DETAILS STYLES ----------*/
+#details h2 {
+  text-align: center;
+  margin-top: 5px;
+}
+
+#details dl{
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 5px;
+  padding: 10px;
+}
+
+/* ---------- INGREDIENTS STYLES ----------*/
+#ingredients {
+  padding: 10px;
+}
+
+#ingredients h2 {
+  text-align: center;
+}
+
+#ingredients ul {
+  list-style-type:square;
+  padding: 10px 15px;
+}
+
+#ingredients li {
+  padding: 5px;
 }
