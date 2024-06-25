@@ -486,4 +486,6 @@ a:hover {
   color: var(--blue-green);
 }
 
-/* ---------- ACTIVE STYLES ----------*/
+nav label:hover svg {
+  transform: rotate(360deg);
+}
