@@ -325,3 +325,37 @@ header p {
 #ingredients li {
   padding: 5px;
 }
+
+/* ---------- DIRECTIONS STYLES ----------*/
+#directions h2 {
+  text-align: center;
+}
+
+#directions ol {
+  padding: 10px 10px 10px 25px;
+  list-style-type: decimal;
+}
+
+#directions li {
+  padding: 10px;
+}
+
+/* ---------- SIDES STYLES ----------*/
+#sides {
+  background-color: var(--blue-green);
+}
+
+#sides h2 {
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+
+#sides article {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+}
+
+#sides h3, #sides p, #sides dl {
+  grid-column: 2 /3;
+}
