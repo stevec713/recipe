@@ -343,19 +343,65 @@ header p {
 /* ---------- SIDES STYLES ----------*/
 #sides {
   background-color: var(--blue-green);
+  padding: 10px;
+  margin-bottom: 25px;
 }
 
 #sides h2 {
   text-align: center;
   padding: 5px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 #sides article {
   display: grid;
-  grid-template-columns: 150px 1fr;
+  grid-template-columns: 125px 1fr;
+  grid-template-rows: 1fr auto 1fr;
+  column-gap: 20px;
+  margin-bottom: 40px;
+  height: 110px;
 }
 
 #sides h3, #sides p, #sides dl {
-  grid-column: 2 /3;
+  grid-column: 2 / 3;
+}
+
+#sides h3 {
+  grid-row: 1 / 2;
+}
+
+#sides p {
+  grid-row: 2 / 3;
+  padding-bottom: 4px;
+}
+
+#sides dl {
+  grid-row: 3 / 4;
+}
+
+#sides img {
+  grid-column: 1 / 2;
+  grid-row: span 3;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#sides dd::first-line {
+  visibility: hidden;
+}
+
+#sides dd svg {
+  margin-right: 5px;
+}
+
+#sides article:first-of-type svg:nth-last-of-type(n + 2),
+#sides article:nth-of-type(2) svg:nth-last-of-type(n + 1),
+#sides article:nth-of-type(3) svg:nth-last-of-type(n + 2),
+#sides article:nth-of-type(4) svg:nth-last-of-type(n + 2) {
+  fill: var(--orange);
+}
+
+/* ---------- FOOTER STYLES ----------*/
+footer {
+  background-color: white;
 }
