@@ -338,6 +338,10 @@ header p {
 }
 
 /* ---------- DIRECTIONS STYLES ----------*/
+#directions {
+  padding: 10px;
+}
+
 #directions h2 {
   text-align: center;
 }
@@ -545,6 +549,10 @@ nav label:hover svg {
     margin: 0;
   }
 
+  header img {
+    width: 100%;
+  }
+
   #details dl {
     grid-template-columns: 105px 150px;
     justify-content: center;
@@ -589,6 +597,115 @@ nav label:hover svg {
   }
 }
 
-@media screen and (min-width: 1280) {
-  
+@media screen and (min-width: 1280px) {
+  nav {
+    box-shadow: none;
+    position: absolute;
+    background-color: var(--gray);
+  }
+
+  nav ul {
+    width: 100%;
+    margin: 0;
+    height: 80px;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0px 6px 6px -1px rgba(0,0,0,0.48);
+    position: fixed;
+  }
+
+  nav li:nth-last-child(n + 2) a {
+    height: 100%;
+    width: 70px;
+  }
+
+  nav form {
+    position:static;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 120px;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr;
+  }
+
+  h1 {
+    text-align: center;
+    padding:0 0 20px 0;
+    grid-column: 1 / 4;
+  }
+
+  header menu {
+    position: static;
+    flex-direction: column;
+    background-color: white;
+    border: 2px solid var(--orange);
+    width: 100%;
+    justify-content: start;
+  }
+
+  #details {
+    background-color: black;
+    color: var(--blue-green);
+  }
+
+  #details h2 {
+    margin: 0;
+  }
+
+  #details dl {
+    grid-template-columns: repeat(5, 150px);
+    grid-template-rows: 1fr 1fr;
+    justify-content: space-evenly;
+    justify-items: center;
+  }
+
+  #details dt {
+    grid-row: 1 / 2;
+  }
+
+  #sides {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+
+  }
+
+  #sides > h2 {
+    grid-column: 1 / -1;
+  }
+
+  #sides article {
+    grid-template-columns: 200px;
+    grid-template-rows: repeat(5, auto);
+    height: auto;
+  }
+
+  #sides h3, #sides p, #sides dl {
+    grid-row: auto;
+    grid-column: 1/2;
+  }
+
+  #sides  h3 {
+    padding-top: 10px;
+  }
+
+  #sides article img {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    width: 100%;
+  }
+
+  #sides dd {
+    height: 20px;
+    overflow-y: hidden;
+  }
+
+  footer div {
+    justify-content: space-between;
+  }
 }
+
+
