@@ -61,7 +61,6 @@ table {
     --body-font: "Montserrat", sans-serif;
 }
 
-
 * {
   box-sizing: border-box;
 }
@@ -98,7 +97,6 @@ h1, h2, h3, nav a, nav span, menu li, #social li, footer, footer section:last-ch
 
 p, dd, li, nav, input {
   font-family: var(--body-font);
-  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
@@ -106,7 +104,6 @@ p, dd, li, nav, input {
 
 dt {
   font-family: var(--body-font);
-  font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
   font-size: 16px;
@@ -479,7 +476,7 @@ input:hover {
 
 a:hover svg{
   stroke: var(--blue-green);
-  background-color: none;
+  background-color:transparent;
 }
 
 a:hover {
@@ -489,7 +486,6 @@ a:hover {
 nav label:hover svg {
   transform: rotate(360deg);
 }
-
 
 /* ---------- MEDIA QUERIES ----------*/
 @media screen and (min-width: 768px) {
@@ -707,5 +703,3 @@ nav label:hover svg {
     justify-content: space-between;
   }
 }
-
-
